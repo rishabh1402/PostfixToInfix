@@ -38,7 +38,7 @@ def getInfix(exp) :
 
 @app.route('/')
 def home():
-        return render_template("home.html")
+        return render_template("potoi.html")
 
 @app.route('/convert_p' ,methods=["GET", "POST"])
 def convert_p():
@@ -46,11 +46,11 @@ def convert_p():
     output = getInfix(string.strip())
 
     return render_template('potoi_res.html', converted_text='{}'.format(output))
-
+"""
 @app.route('/potoi')
 def potoi():
         return render_template("potoi.html")
-
+"""
 if __name__ == "__main__":
     app.run(debug=True)
 
